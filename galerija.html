@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap' rel='stylesheet'>
+    <title>P1Harmony</title>
+    <style>
+        html {overflow: auto;  background: url('8f6faa550e5ba63395ccc51c39e8d986.jpg') no-repeat center fixed; background-size: cover;}
+        h1{color: #FF1493;position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;font-size: 500%; font-family:Archivo Black ;text-shadow:3px 4px 10px white ;}
+        h2{color: #b80062; width: 100%; text-align: center;font-size: 190%}
+        p {text-align:center; font-size:110%;padding: auto;line-height: 1.6; color: white; font-weight: 700;letter-spacing: 2px}
+        .menu {position: fixed;top: 10px;left: 10px;}
+/* uklanja točkice sa <summary> */
+        summary {list-style: none;cursor: pointer;}
+/* slika koja služi kao gumb */
+        summary img {width: 60px;height: 60px;border-radius: 60%;}
+/* okvir menija */
+        details ul {margin: 8x 0 0;padding: 10px;background: rgba(255, 255, 255, 0.862);border:none; border-radius: 4px; list-style-type: none}
+        details ul li {margin: 6px 0;}
+        li a {display:block; color: #FF1493;text-decoration: none;font-size:140%}
+        form {display: flex;flex-direction: column;align-items: center;gap: 10px;}
+        input[type="password"] {padding: 10px 14px;font-size: 16px;border: 1px solid #ff9bd0;border-radius: 6px;outline: none;width: 220px;}
+        input[type="submit"],button {padding: 10px 20px;font-size: 16px;border: none;border-radius: 6px;background-color: #FF1493;color: white;cursor: pointer;transition: 0.2s;}
+        input[type="submit"]:hover {background-color: #ff53af;}
+        button {background-color: #ff53af;color: white;}
+        button:hover {background-color: #ff9bd0;}
+        .content {display: none;text-align: center;}
+        #error {color: #b80062;margin-top: 10px;display: none;}
+        .gallery {column-count: 4;column-gap: 16px;padding: 16px;width: 100%; min-height: 100vh;box-sizing: border-box;}
+        .item {display: inline-block;width: 100%;margin: 0 0 16px;break-inside: avoid;}
+        .item img { width:100%; height:auto; display:block; border-radius:8px; }
+    </style>
+
+</head>
+<body>
+    <div class="menu">
+        <details>
+            <summary>
+                <img src="P1H.jpg" alt="Izbornik">
+            </summary>
+        <ul>
+            <li><a href="index.html">Početna</a></li>
+            <li><a href="profili.html">Profili</a></li>
+            <li><a href="diskografija.html">Diskografija</a></li>
+            <li><a href="galerija.html">Galerija</a></li>
+            <li><a href="video_galerija.html">Video galerija</a></li>
+            <li><a href="https://www.youtube.com/channel/UCe-XzQhLaq4zS_mPXzuc_2Q" target="_blank">YouTube kanal</a></li>
+            <li><a href="https://www.instagram.com/p1h_official/?hl=en" target="_blank">Instagram</a></li>
+            <li><a href="https://x.com/P1H_official" target="_blank">X</a></li>
+            <li><a href="https://www.tiktok.com/@p1harmony?_d=secCgsIARCbDRgBIAMoARI%2BCjwlZVHsMIDHdrlILWW3TW8a%2B5jMDevZTtvRAoFoC3YVMjt%2BGDwDLYqgcKz6uUhGpXhW%2FL544JEGg6pmy4EaAA%3D%3D&language=ko&sec_uid=MS4wLjABAAAAuZSIYQKWcA9RSY5q8BhmwZDLG8nq9W6XcYshV94ZmVMGOOXX2PzS5zX0Q6TXvlAZ&share_author_id=6864861286627492865&tt_from=copy&u_code=de5ji393kj4mi0&user_id=6864861286627492865&utm_campaign=client_share&utm_medium=ios&utm_source=copy&source=h5_t" target="_blank">TikTok</a></li>
+            <li><a href="https://www.facebook.com/P1Harmony" target="_blank">Facebook</a></li>
+        </ul>
+        </details>
+    </div>
+
+    <div id="login" style="height: 100vh;margin: 0;display: flex;flex-direction: column;align-items: center;justify-content: center;text-align: center;">
+        <h2>Unesi lozinku</h2>
+        <p>lozinka je jedan od datuma koji se nalaze na profilima članova</p>
+        <form id="loginForm" onsubmit="return provjeriLozinku(event)">
+            <input type="password" id="password" name="password" placeholder="Lozinka" required>
+            <input type="submit" value="Prijava">
+        </form>
+        <p id="error">Pogrešna lozinka!</p>
+    </div>
+
+    <div class="content" id="content">
+        <div class="gallery">
+            <div class="item"><img src="1a3ea1cdfed9441ac822f9dc277d218f.jpg" alt="Opis 1"></div>
+            <div class="item"><img src="4fadaa7b8c007fb94b5a8ca1b8927def.jpg" alt="Opis 2"></div>
+            <div class="item"><img src="133ff35c781da6879902cdc401bf9bae.jpg" alt="Opis 3" ></div>
+            <div class="item"><img src="1c4841b3edb4e96ed79b36a0217a4d8f.jpg" alt="Opis 4"></div>
+            <div class="item"><img src="GpJ0cWaX0AAsK07.jpg" alt="Opis 5" ></div>
+            <div class="item"><img src="p1harmony.jpg" alt="Opis 6" ></div>
+            <div class="item"><img src="5cc35be4f84c72bcd29c6adbc7b7f77a.jpg" alt="Opis 7" ></div>
+            <div class="item"><img src="4d55c24e730c765550c6e1ef285008e8.jpg" alt="Opis 8" ></div>
+            <div class="item"><img src="b648e89287e1dc3b95c8419bd1abba61.jpg" alt="Opis 9" ></div>
+            <div class="item"><img src="bb5155549583dc7f2fa065d0a40d5a6f.jpg" alt="Opis 10" ></div>
+            <div class="item"><img src="f82a17f66f2058629f5981609101d82f.jpg" alt="Opis 11" ></div>
+            <div class="item"><img src="51385857077be978f92216b4d30e61dc.jpg" alt="Opis 12" ></div>
+            <div class="item"><img src="673ecd7839da81c91534a9740aebf2b6.jpg" alt="Opis 14" ></div>
+            <div class="item"><img src="1238e3ba3c891457eb7580b7657ab178.jpg" alt="Opis 15" ></div>
+            <div class="item"><img src="d781f87a21b67ecb557b763f059ef563.jpg" alt="Opis 16" ></div>
+            <div class="item"><img src="f463a40584c490c98200eccf18d0e299.jpg" alt="Opis 17" ></div>
+            <div class="item"><img src="P1H.jpg" alt="Opis 17" ></div>
+        </div>
+        
+    </div>
+
+    <script>
+        const tocnaLozinka = "28102020";
+
+        function provjeriLozinku(event) {
+            event.preventDefault();
+            const lozinka = document.getElementById("password").value;
+            const error = document.getElementById("error");
+
+        if (lozinka === tocnaLozinka) {
+            document.getElementById("login").style.display = "none";
+            document.getElementById("content").style.display = "block";
+        } else {
+        error.style.display = "block";
+        }
+        return false;}
+    </script>
+</body>
+</html>
