@@ -24,7 +24,17 @@
         .container img {width: 400px;border-radius: 10px;}
         .tekst {flex: 1;margin-left: 20px;font-size: 18px;line-height: 1.5;}
         .overlay {position: absolute;top: 0;bottom: 0;left: 0;right: 0;height: 100%;width: 100%;opacity: 0;transition: .5s ease;background-color: #008CBA;}
-
+    /* manje od 1100px - 3 stupca u galeriji */
+        @media (max-width: 1100px)
+        {.gallery {column-count: 3}}
+    /* manje od 800px - 2 stupca + primjeri idu jedan ispod drugog */
+        @media (max-width: 800px)
+        {.gallery {column-count: 2}
+        .examples .row{flex-direction:column}}
+    /* manje od 480px - 1 stupac i iframei postaju full-width */
+    @media (max-width: 480px)
+        {.gallery {column-count: 1}
+        iframe, embed, object {width:100% !important;height:auto !important}}
     </style>
 </head>
 <body>

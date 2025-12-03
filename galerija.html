@@ -30,6 +30,17 @@
         .gallery {column-count: 4;column-gap: 16px;padding: 16px;width: 100%; min-height: 100vh;box-sizing: border-box;}
         .item {display: inline-block;width: 100%;margin: 0 0 16px;break-inside: avoid;}
         .item img { width:100%; height:auto; display:block; border-radius:8px; }
+    /* manje od 1100px - 3 stupca u galeriji */
+        @media (max-width: 1100px)
+        {.gallery {column-count: 3}}
+    /* manje od 800px - 2 stupca + primjeri idu jedan ispod drugog */
+        @media (max-width: 800px)
+        {.gallery {column-count: 2}
+        .examples .row{flex-direction:column}}
+    /* manje od 480px - 1 stupac i iframei postaju full-width */
+    @media (max-width: 480px)
+        {.gallery {column-count: 1}
+        iframe, embed, object {width:100% !important;height:auto !important}}
     </style>
 
 </head>

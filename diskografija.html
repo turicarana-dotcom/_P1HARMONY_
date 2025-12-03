@@ -27,6 +27,17 @@
         .scroll-container::-webkit-scrollbar {height: 12px;}
         .scroll-container::-webkit-scrollbar-thumb {background: #FF1493;border-radius: 5px;}
         .scroll-container::-webkit-scrollbar-thumb:hover {background: #ff9bd0;}
+            /* manje od 1100px - 3 stupca u galeriji */
+        @media (max-width: 1100px)
+        {.gallery {column-count: 3}}
+    /* manje od 800px - 2 stupca + primjeri idu jedan ispod drugog */
+        @media (max-width: 800px)
+        {.gallery {column-count: 2}
+        .examples .row{flex-direction:column}}
+    /* manje od 480px - 1 stupac i iframei postaju full-width */
+    @media (max-width: 480px)
+        {.gallery {column-count: 1}
+        iframe, embed, object {width:100% !important;height:auto !important}}
     </style>
 </head>
 <body>
