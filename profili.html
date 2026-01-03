@@ -11,6 +11,7 @@
         h2{color: white; text-align: center;font-size: 190%;}
         p {text-align:center; font-size:130%;padding: auto;line-height: 1.6; color: white; font-weight: 700;letter-spacing: 2px}
         a {color: #ffffff;text-decoration: none;}
+        a:active {color: black;background-color: #FF1493;}
         .menu {position: fixed;top: 10px;left: 10px;}
 /* uklanja točkice sa <summary> */
         summary {list-style: none;cursor: pointer;}
@@ -22,6 +23,14 @@
         li a {display:block; color: #FF1493;text-decoration: none;font-size:140%}
         .container {display: flex;align-items: center;justify-content: space-between;padding: 100px;margin-bottom: 40px; /* razmak između sekcija */}
         .container img {width: 400px;border-radius: 10px;}
+        .clan {cursor: pointer;transition: transform 0.2s ease;}
+        .clan:active {transform: scale(0.95);}
+        .keeho:active {content: url("P1Harmony-8th-Mini-Album-DUH-Concept-Photo-documents-3.jpeg");}
+        .theo:active {content: url("P1Harmony-8th-Mini-Album-DUH-Concept-Photo-documents-6.jpeg");}
+        .jiung:active {content: url("P1Harmony-8th-Mini-Album-DUH-Concept-Photo-documents-10.jpeg");}
+        .intak:active{content: url("P1Harmony-8th-Mini-Album-DUH-Concept-Photo-documents-14.jpeg");}
+        .jongseob:active {content: url("P1Harmony-8th-Mini-Album-DUH-Concept-Photo-documents-15.jpeg");}
+        .soul:active {content:url("weverse_3-309910654.jpeg")}
         .tekst {flex: 1;margin-left: 20px;font-size: 18px;line-height: 1.5;}
         .overlay {position: absolute;top: 0;bottom: 0;left: 0;right: 0;height: 100%;width: 100%;opacity: 0;transition: .5s ease;background-color: #008CBA;}
 
@@ -70,7 +79,7 @@
     </div>
     </div>
     <div class="container">
-        <img src="f3ccdd27d2000e3f9255a7e3e2c48800123004.jpg" alt="Slika 1">
+        <img class="clan keeho" src="f3ccdd27d2000e3f9255a7e3e2c48800123004.jpg" alt="Slika 1">
         <div class="tekst">
             <h2 id="keeho">KEEHO (기호)</h2>
             <p>Yoon Kee-ho (윤기호), ili kako mu englesko ime glasi Stephen Yoon, rođen je 27. rujna 2001. u Torontu, Canada. On je vođa grupe i vokalista. Ima stariju sestru i 
@@ -84,10 +93,10 @@
             <p>Choi Tae-yang (최태양) rođen je 1. srpnja 2001. u Daejonu u Južnoj Koreji. Njegovo ime "Taeyang" znači sunce, a "Theo" predstavlja dar od Boga. Njegova pozicija u grupi je vokalist.</p>
             <p>Jednu od njegovih obrada poslušajte <a href="https://www.youtube.com/watch?v=UksCA2o0Rbg" style="color: #b80062;">ovdje</a>.</p>
         </div>
-        <img src="f3ccdd27d2000e3f9255a7e3e2c48800123154.jpg" alt="Slika 2">
+        <img class="clan theo" src="f3ccdd27d2000e3f9255a7e3e2c48800123154.jpg" alt="Slika 2">
     </div>
     <div class="container">
-        <img src="f3ccdd27d2000e3f9255a7e3e2c48800123354.jpg" alt="Slika 3">
+        <img class="clan jiung" src="f3ccdd27d2000e3f9255a7e3e2c48800123354.jpg" alt="Slika 3">
         <div class="tekst">
             <h2 id="jiung">JIUNG (지웅)</h2>
             <p>Choi Ji-ung (최지웅) rođen je 7. listopada 2001. u glavnom gradu Seoulu u Južnoj Koreji. On je reper, vokalist i plesač u grupi. Isti tako, jedan je od njihovih producenata i 
@@ -102,10 +111,10 @@
                 njegova imena je vrlo kreativno, "učinite svoje ime široko poznatim tako što ćete ga ugravirati na istoku".</p>
             <p>Kako bi se uvjerili da je odličan plesač, pogledajte ovaj <a href="https://www.youtube.com/watch?v=0Ya6M6BWSo4&t=19s" style="color: #b80062;">video</a>.</p>
         </div>
-        <img src="f3ccdd27d2000e3f9255a7e3e2c48800123517.jpg" alt="Slika 2">
+        <img class="clan intak" src="f3ccdd27d2000e3f9255a7e3e2c48800123517.jpg" alt="Slika 2">
     </div>
     <div class="container">
-        <img src="f3ccdd27d2000e3f9255a7e3e2c48800123652.jpg" alt="Slika 3">
+        <img class="clan soul" src="f3ccdd27d2000e3f9255a7e3e2c48800123652.jpg" alt="Slika 3">
         <div class="tekst">
             <h2 id="soul">SOUL (소울)</h2>
             <p>Haku Shota (白翔太) rođen je 1. veljače 2005. u Saitami, Japan. On je reper i plesač u grupi. Pošto nije Koreac, na početku se mučio s jezikom. Njegovo ime "Shota" znači "dijete s čistom dušom".</p>
@@ -119,7 +128,7 @@
                 Roditelji su mu poznata lica u Koreji. Otac, Kim Youngjae, osnivač je Korejske nacionalne tvrtke za suvremeni ples, a majka, Kim Yeonju, je jazz plesačica. On je reper, plesač i najmlađi član grupe.</p>
             <p>Njegov nastup možete pogledati <a href="https://www.youtube.com/watch?v=QeEBCTBPbWY" style="color: #b80062;">ovdje</a>.</p>
         </div>
-        <img src="f3ccdd27d2000e3f9255a7e3e2c48800123822.jpg" alt="Slika 2">
+        <img class="clan jongseob" src="f3ccdd27d2000e3f9255a7e3e2c48800123822.jpg" alt="Slika 2">
     </div>
 </body>
 </html>
