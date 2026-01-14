@@ -33,6 +33,11 @@
         .video-container {width: 95%;}
         summary img {width: 45px; height: 45px;}
         li a {font-size: 120%;}}
+
+    @keyframes fadeUp {
+    from {opacity: 0;transform: translateY(60px);}
+    to {opacity: 1;transform: translateY(0);}}
+    .videos-wrapper {animation: fadeUp 1.2s ease forwards;}
 </style>
 
 <body>
@@ -56,6 +61,7 @@
         </ul>
         </details>
     </div>
+<div class="videos-wrapper">
 <div class="video-container">
     <iframe width="560" height="315" src="DUH!.mp4"></iframe>
     <p class="opis">DUH! video</p>
@@ -67,6 +73,7 @@
 <div class="video-container">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/CsbdH4XFyAA?si=AMBxal95Dy9bcdtO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     <p class="opis">vodič u grupu</p>
+</div>
 </div>
 </body>
 </html>
