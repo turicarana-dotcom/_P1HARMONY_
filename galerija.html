@@ -10,7 +10,7 @@
         h1{color: #FF1493;position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;font-size: 500%; font-family:Archivo Black ;text-shadow:3px 4px 10px white ;}
         h2{color: #b80062; width: 100%; text-align: center;font-size: 190%}
         p {text-align:center; font-size:110%;padding: auto;line-height: 1.6; color: white; font-weight: 700;letter-spacing: 2px}
-        .menu {position: fixed;top: 10px;left: 10px;}
+        .menu {position: fixed;top: 10px;left: 10px;z-index: 9999;}
 /* uklanja točkice sa <summary> */
         summary {list-style: none;cursor: pointer;}
 /* slika koja služi kao gumb */
@@ -27,9 +27,9 @@
         button:hover {background-color: #ff9bd0;}
         .content {display: none;text-align: center;}
         #error {color: #b80062;margin-top: 10px;display: none;}
-        .gallery {column-count: 4;column-gap: 16px;padding: 16px;width: 100%; min-height: 100vh;box-sizing: border-box;}
-        .item {display: inline-block;width: 100%;margin: 0 0 16px;break-inside: avoid;}
-        .item img { width:100%; height:auto; display:block; border-radius:8px; }
+        .gallery {column-count: 4;column-gap: 16px;padding: 16px;width: 100%; min-height: 100vh;box-sizing: border-box; perspective: 1200px;z-index: 1;}
+        .item {display: inline-block;width: 100%;margin: 0 0 16px;break-inside: avoid;z-index: 1;}
+        .item img { width:100%; height:auto; display:block; border-radius:8px;z-index: 1; }
     /* manje od 1100px - 3 stupca u galeriji */
         @media (max-width: 1100px)
         {.gallery {column-count: 3}}
@@ -41,6 +41,14 @@
         @media (max-width: 480px)
         {.gallery {column-count: 1}
         iframe, embed, object {width:100% !important;height:auto !important}}
+        
+        @keyframes fadeRotate {
+        from {opacity: 0;transform: rotateY(-20deg) translateY(40px);}
+        to {opacity: 1;transform: rotateY(0) translateY(0);}}
+        .gallery > .item {animation: fadeRotate 1s ease forwards;transform-style: preserve-3d;}
+        .gallery > .item:nth-child(even) {animation-delay: 0.3s;}
+        .gallery > .item img {transition: transform 0.6s; backface-visibility: hidden;}
+        .gallery > .item:hover img {transform: rotateY(15deg) scale(1.05);}
     </style>
 
 </head>
